@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
   final String hint;
-  final IconData icon;
+  final IconData ?icon;
   final TextInputType? keyboardType;
+  final InputBorder? border;
 
   const CustomTextField({
     super.key,
     required this.hint,
-    required this.icon,
-    this.keyboardType,
+     this.icon,
+    this.keyboardType, this.border,
   });
 
   @override
@@ -20,7 +21,7 @@ class CustomTextField extends StatelessWidget {
         prefixIcon: Icon(icon),
         filled: true,
         fillColor: Colors.white,
-        border: OutlineInputBorder(
+        border:border ?? OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide.none,
         ),

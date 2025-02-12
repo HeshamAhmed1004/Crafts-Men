@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:trade_craft/core/helpers/extention.dart';
+import 'package:trade_craft/core/routing/app_router.dart';
+import 'package:trade_craft/core/routing/routes.dart';
 import 'package:trade_craft/features/home/ui/widgets/service.dart';
 
 class ServicesGrid extends StatelessWidget {
@@ -39,34 +42,40 @@ class ServiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Expanded(
-          child: Container(
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              border: Border.all(color: const Color(0xFF3B5998), width: 2),
-            ),
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Image.asset(
-                  service.iconPath,
-                  color: const Color(0xFF3B5998),
+    return GestureDetector(
+      onTap: () {
+        // TODO: Navigate to service screen
+        context.pushNamed(Routes.serviceScreen,arguments: service.name);
+      },
+      child: Column(
+        children: [
+          Expanded(
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                border: Border.all(color: const Color(0xFF3B5998), width: 2),
+              ),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Image.asset(
+                    service.iconPath,
+                    color: const Color(0xFF3B5998),
+                  ),
                 ),
               ),
             ),
           ),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          service.name,
-          style: const TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w500,
+          const SizedBox(height: 8),
+          Text(
+            service.name,
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
