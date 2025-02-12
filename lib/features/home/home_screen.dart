@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:trade_craft/features/ex/home/promotion_banner.dart';
-import 'package:trade_craft/features/ex/home/services_grid.dart';
-
-import 'bottom_navigation.dart';
-import 'location_bar.dart';
-
+import 'package:trade_craft/features/home/ui/widgets/bottom_navigation.dart';
+import 'package:trade_craft/features/home/ui/widgets/location_bar.dart';
+import 'package:trade_craft/features/home/ui/widgets/promotion_banner.dart';
+import 'package:trade_craft/features/home/ui/widgets/services_grid.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -44,7 +42,6 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
-
             const LocationBar(),
             const PromotionBanner(),
             const Expanded(

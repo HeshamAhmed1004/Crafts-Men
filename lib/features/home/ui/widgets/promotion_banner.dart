@@ -10,10 +10,6 @@ class PromotionBanner extends StatelessWidget {
       height: 160,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16.0),
-        image: const DecorationImage(
-          image: AssetImage('assets/images/plumbing_banner.jpg'),
-          fit: BoxFit.cover,
-        ),
       ),
       child: Container(
         decoration: BoxDecoration(

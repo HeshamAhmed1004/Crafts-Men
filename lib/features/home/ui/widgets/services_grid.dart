@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:trade_craft/features/ex/home/service.dart';
+import 'package:trade_craft/features/home/ui/widgets/service.dart';
 
 class ServicesGrid extends StatelessWidget {
   const ServicesGrid({super.key});

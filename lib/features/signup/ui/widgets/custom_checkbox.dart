@@ -17,10 +17,10 @@ class CustomCheckbox extends StatelessWidget {
     return Row(
       children: [
         Checkbox(
-
           value: value,
           onChanged: onChanged,
           activeColor: Colors.green,
+          side: const BorderSide(color: Colors.white),
         ),
         Expanded(
           child: Text(

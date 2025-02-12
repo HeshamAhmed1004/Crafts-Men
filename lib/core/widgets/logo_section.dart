@@ -9,14 +9,6 @@ class LogoSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 40),
       child: Column(
         children: [
-          // const Text(
-          //   'مقاولون',
-          //   style: TextStyle(
-          //     color: Colors.white,
-          //     fontSize: 32,
-          //     fontWeight: FontWeight.bold,
-          //   ),
-          // ),
           const SizedBox(height: 20),
           Image.asset(
             'assets/images/logo2.png',

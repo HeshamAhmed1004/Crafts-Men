@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:trade_craft/features/ex/validators.dart';
+import 'package:trade_craft/features/signup/ui/widgets/validators.dart';
 
 class PhoneInputField extends StatelessWidget {
   final TextEditingController controller;
