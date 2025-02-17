@@ -15,14 +15,17 @@ class TradeCraftApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
+
         title: "TradeCraft App",
         theme: ThemeData(
           primaryColor: ColorsManger.mainBlue,
           scaffoldBackgroundColor: Colors.white,
         ),
+        locale: const Locale('ar'),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.homeScreen,
+        initialRoute: Routes.myOrderScreen,
         onGenerateRoute: appRouter.generateRoute,
+
       ),
     );
   }
