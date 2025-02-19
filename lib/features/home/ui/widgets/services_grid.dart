@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:trade_craft/core/helpers/extention.dart';
-import 'package:trade_craft/core/routing/app_router.dart';
 import 'package:trade_craft/core/routing/routes.dart';
 import 'package:trade_craft/features/home/ui/widgets/service.dart';
 
@@ -14,7 +13,7 @@ class ServicesGrid extends StatelessWidget {
         const Padding(
           padding: EdgeInsets.all(16.0),
           child: Text(
-            'Choose the service',
+            'اختيار الخدمة',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
@@ -53,7 +52,8 @@ class ServiceCard extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(color: const Color(0xFF3B5998), width: 2),
+
+                border: Border.all(color:  Color(0xFF3B5998), width: 2),
               ),
               child: Center(
                 child: Padding(

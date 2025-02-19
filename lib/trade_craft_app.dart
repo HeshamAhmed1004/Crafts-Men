@@ -23,7 +23,7 @@ class TradeCraftApp extends StatelessWidget {
         ),
         locale: const Locale('ar'),
         debugShowCheckedModeBanner: false,
-        initialRoute: Routes.myOrderScreen,
+        initialRoute: Routes.serviceScreen,
         onGenerateRoute: appRouter.generateRoute,
 
       ),

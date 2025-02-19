@@ -25,7 +25,7 @@ class LocationBar extends StatelessWidget {
           const SizedBox(width: 8),
           const Expanded(
             child: Text(
-              '56 Street, Ain Shams, Cairo',
+              'صقر قريش المعادي القاهرة',
               style: TextStyle(fontSize: 16),
             ),
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trade_craft/features/signup/ui/widgets/signup_form.dart';
 import 'widgets/custom_dropdown.dart';
+import 'widgets/sign_up_bloc_listener.dart';
 
 
 class SignupScreen extends StatelessWidget {
@@ -70,6 +71,8 @@ class SignupScreen extends StatelessWidget {
                           // ),
                           // const SizedBox(height: 8),
                           const SignupForm(),
+                          const SignupBlocListener()
+
 
                         ],
                       ),

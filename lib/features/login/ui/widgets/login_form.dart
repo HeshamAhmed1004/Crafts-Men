@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:trade_craft/core/helpers/extention.dart';
+import 'package:trade_craft/core/routing/routes.dart';
 import 'package:trade_craft/core/widgets/custom_button.dart';
+import 'package:trade_craft/features/login/logic/login_cubit.dart';
 
 import '../../../../core/widgets/custom_text_field.dart';
 
@@ -11,12 +15,12 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
-  final _formKey = GlobalKey<FormState>();
+  // final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: _formKey,
+      key: context.read<LoginCubit>().formKey,
       child: Padding(
         padding: const EdgeInsets.only(left: 16.0, right: 16.0,bottom: 16.0),
         child: Card(
@@ -40,42 +44,29 @@ class _LoginFormState extends State<LoginForm> {
                   ),
                 ),
                 const SizedBox(height: 20),
-                const CustomTextField(
+                 CustomTextField(
+                  controller: context.read<LoginCubit>().emailController,
                   hint: 'ايميل المستخدم',
                   icon: Icons.email_outlined,
-                  keyboardType: TextInputType.phone,
+                  keyboardType: TextInputType.emailAddress,
+
                 ),
                 const SizedBox(height: 20),
-                const CustomTextField(
-                  hint: 'كلمة المرور',
+                 CustomTextField(
+                   controller: context.read<LoginCubit>().passwordController,
+                   hint: 'كلمة المرور',
                   icon: Icons.lock_outline,
                   keyboardType: TextInputType.phone,
                 ),
                 const SizedBox(height: 20),
-                // ElevatedButton(
-                //   onPressed: () {
-                //     if (_formKey.currentState!.validate()) {
-                //       // Handle registration
-                //     }
-                //   },
-                //   style: ElevatedButton.styleFrom(
-                //     backgroundColor: Colors.red,
-                //     minimumSize: const Size(double.infinity, 50),
-                //     shape: RoundedRectangleBorder(
-                //       borderRadius: BorderRadius.circular(8),
-                //     ),
-                //   ),
-                //   child: const Text(
-                //     'تسجيل الدخول',
-                //     style: TextStyle(
-                //       fontSize: 18,
-                //       color: Colors.white,
-                //     ),
-                //   ),
-                // ),
                 CustomButton(
                   text: "تسجيل الدخول",
-                  onPressed: () {},
+                  onPressed: () {
+                    if(context.read<LoginCubit>().formKey.currentState!.validate())
+                      {
+                        context.read<LoginCubit>().emitLoginStates();
+                      }
+                  },
 
                 ),
                 const SizedBox(height: 20),
@@ -102,7 +93,10 @@ class _LoginFormState extends State<LoginForm> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        context.pop();
+                        Navigator.pushNamed(context, Routes.signupScreen);
+                      },
                       child: const Text(
                         'اضغط هنا',
                         style: TextStyle(

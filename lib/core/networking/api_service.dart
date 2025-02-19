@@ -1,8 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:retrofit/http.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:trade_craft/features/login/data/models/login_request_body.dart';
 import 'package:trade_craft/features/login/data/models/login_response.dart';
+import 'package:trade_craft/features/signup/data/models/sign_up_request_body.dart';
+import 'package:trade_craft/features/signup/data/models/sign_up_response.dart';
 
 import 'api_constants.dart';
 
@@ -16,8 +17,8 @@ abstract class ApiService {
       @Body() LoginRequestBody loginRequestBody
       );
 
-  // @POST(ApiConstants.signup)
-  // Future<SignupResponse> signup(
-  //     @Body() SignupRequestBody signupRequestBody
-  //     );
+  @POST(ApiConstants.signup)
+  Future<SignupResponse> signup(
+      @Body() SignupRequestBody signupRequestBody
+      );
 }

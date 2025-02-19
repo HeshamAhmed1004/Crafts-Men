@@ -23,22 +23,22 @@ class BottomNavigation extends StatelessWidget {
         children: [
           _NavItem(
             icon: Icons.home,
-            label: 'Home',
+            label: 'الرئيسية',
             isSelected: true,
           ),
           _NavItem(
             icon: Icons.receipt_long,
-            label: 'My Order',
+            label: 'طلباتي',
             isSelected: false,
           ),
           _NavItem(
             icon: Icons.local_offer,
-            label: 'Offer',
+            label: 'العروض',
             isSelected: false,
           ),
           _NavItem(
             icon: Icons.settings,
-            label: 'Settings',
+            label: 'الإعدادات',
             isSelected: false,
           ),
         ],

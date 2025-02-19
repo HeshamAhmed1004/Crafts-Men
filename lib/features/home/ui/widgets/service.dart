@@ -9,27 +9,27 @@ class Service {
 
   static final List<Service> all = [
     const Service(
-      name: 'Finishing',
+      name: 'التشطيبات',
       iconPath: 'assets/images/img_5.png',
     ),
     const Service(
-      name: 'Carpentry',
+      name: 'نجارة',
       iconPath: 'assets/images/img_3.png',
     ),
     const Service(
-      name: 'Plumbing',
+      name: 'سباكة',
       iconPath: 'assets/images/img_4.png',
     ),
     const Service(
-      name: 'Conditioning',
+      name: 'تكييفات',
       iconPath: 'assets/images/img_6.png',
     ),
     const Service(
-      name: 'Electricity',
+      name: 'كهرياء',
       iconPath: 'assets/images/img_7.png',
     ),
     const Service(
-      name: 'Paint',
+      name: 'دهانات',
       iconPath: 'assets/images/img_8.png',
     ),
   ];

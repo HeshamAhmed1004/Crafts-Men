@@ -6,5 +6,8 @@ class Routes{
   static const String homeScreen= '/homeScreen';
   static const String serviceScreen= '/serviceScreen';
   static const String  myOrderScreen= '/myOrderScreen';
+  static const String  serviceMakerScreen= '/serviceMakerScreen';
+  static const String  layoutScreen= '/layoutScreen';
+
 
 }

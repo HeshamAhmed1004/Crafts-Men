@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/login_bloc_listener.dart';
 import 'widgets/login_form.dart';
 import '../../../core/widgets/logo_section.dart';
 
@@ -30,6 +31,7 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       LogoSection(),
                       LoginForm(),
+                      LoginBlocListener(),
                     ],
                   ),
                 ),

@@ -5,17 +5,20 @@ class CustomTextField extends StatelessWidget {
   final IconData ?icon;
   final TextInputType? keyboardType;
   final InputBorder? border;
+  final TextEditingController? controller;
+
 
   const CustomTextField({
     super.key,
     required this.hint,
      this.icon,
-    this.keyboardType, this.border,
+    this.keyboardType, this.border, this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller:controller ,
       decoration: InputDecoration(
         hintText: hint,
         prefixIcon: Icon(icon),

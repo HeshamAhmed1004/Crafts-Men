@@ -40,7 +40,7 @@ class ProblemDescriptionTextField extends StatelessWidget {
 
       validator: (value) {
         if (value?.isEmpty ?? true) {
-          return 'الحقل مطلوب';
+          return 'هذا الحقل مطلوب*';
         } else {
           return null;
         }
